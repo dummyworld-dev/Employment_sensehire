@@ -39,9 +39,14 @@ app.post("/api/f03", (req, res) => {
 });
 
 // ======================
+// F10 ROUTE (AI Recommendations)
+// ======================
+app.use('/api/recommendations', require('./routes/f10-routes'));
+
+// ======================
 // START SERVER
 // ======================
-const PORT = 5000;
+const PORT = 3001;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
